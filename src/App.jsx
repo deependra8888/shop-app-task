@@ -12,7 +12,7 @@ export default function App() {
     const [cart, setCart] = useState([]);
     const [colors, setColors] = useState([]);
     const [totalStock, setTotalStock] = useState({})
-
+    
     const [filters, setFilters] = useState({
         search: '',
         color: [],
@@ -147,6 +147,7 @@ export default function App() {
             price: [],
             type: [],
         });
+        
     };
 
 
@@ -180,6 +181,7 @@ export default function App() {
                         placeholder="Search by name, color, or type"
                         size="large"
                         onChange={onSearch}
+                        value={filters.search}
                     />
                     <div className="sm:p-1">
                         <Button
